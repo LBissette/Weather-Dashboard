@@ -7,33 +7,37 @@ header {
 
 }
 .container {
-    width: 100%;
-    height: 100vh;
     display: flex;
-    background: #460303;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
+
+.container .left {
+    flex: 50%;
+}
+
+.container .right {
+    flex: 50%;
+}
+
 form {
     background: #fff;
     width: 500px;
     height: 55px;
-    display: flex;
+    display: flexbox;
     border-radius: 40px;
     border: 2px;
     border-color: black;
 }
+
 form input {
     flex: 1;
-    border: none;
-    outline: none;
+    outline: auto;
 }
 form button {
     background: navy;
-    padding: 10px 50px;
+    padding: 10px 60px;
+    margin-top: 2px;
     border: none;
-    border-top-right-radius: 40px ;
-    border-bottom-right-radius: 40px;
     outline: none;
     color: rgb(244, 234, 234);
     letter-spacing: 1px;

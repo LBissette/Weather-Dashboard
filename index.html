@@ -5,20 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="\assets\style.css">
+    <link rel="stylesheet" href="C:\Users\logan\Documents\Coding\Weather-Dashboard\assets\style.css">
 </head>
 <body>
     <header>Weather Dashboard</header>
-    <section class="search">
-        <h1>Search for a City:</h1>
-        <form>
-            <input class="searchInput" type="text" placeholder="Search by City, State, or ZIP">
-            <button class="searchButton" type="submit"></submit>Search</button>
-          </form>
-    </section>
-    
-
-      <link rel="script" href="/assets/script.js">
+    <div class="container">
+        <div class="row">
+            <div class="left">
+                <section class="search">
+                    <h1>Search for a City:</h1>
+                    <form>
+                        <input class="searchInput" type="text" placeholder="Search by City, State, or ZIP">
+                        <br>
+                        <button class="searchButton" type="submit"></submit>Search</button>
+                    </form>
+                    <div class="list-group" id="history"></div>   
+                </section>
+            </aside>
+            
+            <div class="right">
+                <section class="results">
+                    <h1 id="cityDate"></h1>
+                    <p id="temp"></p>
+                    <p id="wind"></p>
+                    <p id="humidity"></p>
+                </section>
+            </div>
+        </div>
+        
+    </div>
+    <script src="C:\Users\logan\Documents\Coding\Weather-Dashboard\assets\script.js"></script>
 </body>
 
 </html>
