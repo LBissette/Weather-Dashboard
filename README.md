@@ -1,6 +1,6 @@
 # Weather-Dashboard
 
-![Screenshot](.\assets\photos\screenshot.png "Screenshot")
+![Screenshot](assets\photos\screenshot.png "Screenshot")
 ## Description
 This website was created using the OpenWeather API. You can view the current weather in any city.
 
