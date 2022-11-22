@@ -40,7 +40,9 @@ function appendToHistory(search) {
     if (searchHistory.indexOf(search) !== -1) {
         return;
     }
-    searchHistory.push(search);
+    if (searchHistory.includes(searchInput.value)) {
+        searchHistory.push(search);
+    }
     localStorage.setItem('search-history', JSON.stringify(searchHistory));
     renderSearchHistory();
 }
@@ -62,16 +64,13 @@ function historyList(searchValue) {
 }
 
 function forecast(lat, lon) {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKey}`)
         .then((response) => response.json())
         .then((response) => {
             console.log(response);
 
             for (var i = 4; response.list.length; i = i + 8) {
-                var temp = $("<p>").text(response.list[i].main.temp)
-
-
-
+                var temp = ("<p>").text(response.list[i].main.temp)
                 $("#forecastDiv").append(temp)
             }
 
@@ -82,8 +81,7 @@ function forecast(lat, lon) {
 searchButton.addEventListener("click", function(event){
     event.preventDefault()
     historyList(searchInput.value)
-   fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput.value + "&units=imperial" + "&appid=" + APIKey)
+   fetch("https://api.openweathermap.org/data/2.5/weather?q=" + searchInput.value + "&units=imperial" + "&appid=" + APIKey)
     .then((response) => response.json())
     .then((response) => {
         console.log(response);

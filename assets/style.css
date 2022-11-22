@@ -1,10 +1,16 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 header {
     text-align: center;
     font-size: xx-large;
+    color: white;
+    background-image: linear-gradient(to right, blue , navy);
 }
 
-.search {
-
+.searchInput {
+    font-size: larger;
 }
 .container {
     display: flex;
@@ -22,7 +28,7 @@ header {
 form {
     background: #fff;
     width: 500px;
-    height: 55px;
+    height: auto;
     display: flexbox;
     border-radius: 40px;
     border: 2px;
@@ -34,6 +40,7 @@ form input {
     outline: auto;
 }
 form button {
+    width: 200px;
     background: navy;
     padding: 10px 60px;
     margin-top: 2px;
@@ -42,4 +49,31 @@ form button {
     color: rgb(244, 234, 234);
     letter-spacing: 1px;
     cursor: pointer;
+}
+.list-group {
+    width:30%;
+}
+.history-btn {
+    display: block;
+    width: 200px;
+    padding: 10px 60px;
+    margin-top: 3px;
+    border: none;
+    outline: none;
+    background: blue;
+    color: rgb(244, 234, 234);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    float: left;
+}
+.right {
+    display: flex;
+    float: right;
+    height: 250px;
+    width: 500px;
+    padding: 10 px;
 }
